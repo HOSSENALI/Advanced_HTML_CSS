@@ -56,3 +56,21 @@ h1 {
     padding: 10px;
     text-align: center;
 }
+/* css for table...................... */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  
+  td, th {
+    border: 1px solid #d06666;
+    text-align: left;
+    padding: 8px;
+    border-style: dotted;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
