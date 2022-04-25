@@ -9,65 +9,9 @@
     <!-- Latest compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        h1 {
-            color: maroon;
-        }
 
-        .Container {
-            /* border: 2px solid; */
-            width: 90%;
-            padding: 20px;
-            margin: 0 auto;
-        }
-
-        .top {
-            /* border: 2px solid; */
-            margin-bottom: 10px;
-            background-color: azure;
-            padding-left: 10px;
-        }
-
-        .imageDiv img {
-
-            /* border-radius: 20%; */
-            width: 100%;
-            height: 100%;
-
-        }
-
-        .imageDiv {
-            height: 300px;
-            margin-bottom: 2px;
-        }
-
-        .post {
-
-            border: 1px solid red;
-
-        }
-
-        .details {
-            background-color: black;
-            padding: 10px;
-            color: aliceblue;
-        }
-
-        .single {
-
-            /* border: 1px solid black; */
-            padding: 5px;
-            margin-bottom: 1em;
-            display: inline-block;
-            width: 30%;
-        }
-
-        .footer {
-            background: wheat;
-            height: 70px;
-            padding: 10px;
-            text-align: center;
-        }
     </style>
 </head>
 
@@ -111,11 +55,12 @@
                 </section>
 
             </section>
-            <div style="margin-top: 100px;">
+            <!-- This a map of photos -->
+            <div style="margin-top: 100px; display: inline-block;border: 1px solid red;">
                 <div style="font-size: 300%;">This is a map of Images</div>
 
                 <div>
-                    <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap">
+                    <img src="/images/workplace.jpg" alt="Workplace" usemap="#workmap">
 
                     <map name="workmap">
                         <area shape="rect" coords="54,64,290,370" alt="Computer" href="computer.htm">
@@ -123,6 +68,16 @@
                         <area shape="circle" coords="357,320,44" alt="Coffee" href="coffee.htm">
                     </map>
                 </div>
+            </div>
+            <!-- This a picture element -->
+            <div style="margin-top: 10px; display: inline-block;border: 1px solid red;">
+                <h2 style="font-size: 300%;">The picture Element</h2>
+
+                <picture>
+                    <source media="(min-width: 650px)" srcset="/images/img_food.jpg">
+                    <source media="(min-width: 465px)" srcset="/images/img_car.jpg">
+                    <img src="/images/img_girl.jpg" style="width:auto;">
+                </picture>
             </div>
             <div>
                 <footer>

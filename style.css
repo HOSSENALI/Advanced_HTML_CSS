@@ -1,0 +1,58 @@
+h1 {
+    color: maroon;
+}
+
+.Container {
+    /* border: 2px solid; */
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.top {
+    /* border: 2px solid; */
+    margin-bottom: 10px;
+    background-color: azure;
+    padding-left: 10px;
+}
+
+.imageDiv img {
+
+    /* border-radius: 20%; */
+    width: 100%;
+    height: 100%;
+
+}
+
+.imageDiv {
+    height: 300px;
+    margin-bottom: 2px;
+}
+
+.post {
+
+    border: 1px solid red;
+
+}
+
+.details {
+    background-color: black;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.single {
+
+    /* border: 1px solid black; */
+    padding: 5px;
+    margin-bottom: 1em;
+    display: inline-block;
+    width: 30%;
+}
+
+.footer {
+    background: wheat;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+}
