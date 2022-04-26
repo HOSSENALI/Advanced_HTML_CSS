@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="10"> --> 
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="/images/img_girl.jpg">
     <!-- Latest compiled and minified CSS -->
@@ -19,6 +20,14 @@
 <body>
     <main>
         <div class="Container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
             <header class="top">
                 <h1>DAILY UPDATES</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, saepe?</p>
@@ -57,67 +66,114 @@
 
             </section>
             <!-- This a map of photos -->
-            <div style="margin-top: 100px; display: inline-block;border: 1px solid red;">
-                <div style="font-size: 300%;">This is a map of Images</div>
+            <div style="border: 1px solid blue;margin: 5px 0 5px 0;">
+                <div style="margin-top: 100px; display: inline-block;border: 1px solid red;">
+                    <div style="font-size: 300%;">This is a map of Images</div>
 
-                <div>
-                    <img src="/images/workplace.jpg" alt="Workplace" usemap="#workmap">
+                    <div>
+                        <img src="/images/workplace.jpg" alt="Workplace" usemap="#workmap">
 
-                    <map name="workmap">
-                        <area shape="rect" coords="54,64,290,370" alt="Computer" href="computer.htm">
-                        <area shape="rect" coords="310,192,353,270" alt="Phone" href="phone.htm">
-                        <area shape="circle" coords="357,320,44" alt="Coffee" href="coffee.htm">
-                    </map>
+                        <map name="workmap">
+                            <area shape="rect" coords="54,64,290,370" alt="Computer" href="computer.htm">
+                            <area shape="rect" coords="310,192,353,270" alt="Phone" href="phone.htm">
+                            <area shape="circle" coords="357,320,44" alt="Coffee" href="coffee.htm">
+                        </map>
+                    </div>
+                </div>
+                <!-- This a picture element -->
+                <div style="margin-top: 10px; display: inline-block;border: 1px solid red;">
+                    <h2 style="font-size: 300%;">The picture Element</h2>
+
+                    <picture>
+                        <source media="(min-width: 650px)" srcset="/images/img_food.jpg">
+                        <source media="(min-width: 465px)" srcset="/images/img_car.jpg">
+                        <img src="/images/img_girl.jpg" style="width:auto;">
+                    </picture>
+                </div>
+                <!-- table......................... -->
+                <div style="display: inline-block;">
+                    <h2>HTML Table</h2>
+
+                    <table>
+                        <tr>
+                            <th>Company</th>
+                            <th>Contact</th>
+                            <th>Country</th>
+                        </tr>
+                        <tr>
+                            <td>Alfreds Futterkiste</td>
+                            <td>Maria Anders</td>
+                            <td rowspan="2">Germany</td>
+                        </tr>
+                        <tr>
+                            <td>Centro comercial Moctezuma</td>
+                            <td>Francisco Chang</td>
+
+                        </tr>
+                        <tr>
+                            <td>Ernst Handel</td>
+                            <td>Roland Mendel</td>
+                            <td>Austria</td>
+                        </tr>
+                        <tr>
+                            <td>Island Trading</td>
+                            <td>Helen Bennett</td>
+                            <td>UK</td>
+                        </tr>
+
+                    </table>
                 </div>
             </div>
-            <!-- This a picture element -->
-            <div style="margin-top: 10px; display: inline-block;border: 1px solid red;">
-                <h2 style="font-size: 300%;">The picture Element</h2>
+            <!-- Here is an example of iframe -->
+            <div class="iframe" style="border: 1px solid red;">
+                <h2>Iframe - Target for a Link</h2>
 
-                <picture>
-                    <source media="(min-width: 650px)" srcset="/images/img_food.jpg">
-                    <source media="(min-width: 465px)" srcset="/images/img_car.jpg">
-                    <img src="/images/img_girl.jpg" style="width:auto;">
-                </picture>
+                <iframe src="index.html" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+
+                <p><a href="index.html" target="iframe_a">click here to go google</a></p>
+
+                <p>When the target attribute of a link matches the name of an iframe, the link will open in the iframe.
+                </p>
             </div>
-            <h2>HTML Table</h2>
+            <!-- javaScript..................... -->
+            <div style="border: 1px solid red;margin-top: 2px;display: inline-block;">
+                <p id="demo">This is a javaScript example</p>
+                <button type="button" onclick="myFunction()">click to change text</button>
+            </div>
 
-            <table >
-                <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td rowspan="2">Germany</td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                   
-                </tr>
-                <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                </tr>
-                <tr>
-                    <td>Island Trading</td>
-                    <td>Helen Bennett</td>
-                    <td>UK</td>
-                </tr>
-               
-            </table>
-            <div>
+            <div style="display: inline-block;">
+                <img id="myImage" src="/images/pic_bulboff.gif" width="100" height="180">
+
+                <p>
+                    <button type="button" onclick="light(1)">Light On</button>
+                    <button type="button" onclick="light(0)">Light Off</button>
+                </p>
+            </div>
+            <div class="footer">
                 <footer>
-                    <p class="footer">Copy right@Hossen</p>
+                    <p >Copy right@Hossen</p>
+
                 </footer>
+
             </div>
-
         </div>
-
     </main>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "changed text";
+            document.getElementById("demo").style.fontSize = "25px";
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.background = "yellow";
 
+        }
+        function light(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "/images/pic_bulboff.gif"
+            } else {
+                pic = "/images/pic_bulbon.gif"
+            }
+            document.getElementById('myImage').src = pic;
+        }
+    </script>
 </body>
