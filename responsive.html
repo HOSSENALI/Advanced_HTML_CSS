@@ -1,8 +1,14 @@
 <!DOCTYPE html>
+<html lang="en-us">
+
+
 <html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Responsive</title>
+
     <style>
         * {
             box-sizing: border-box;
@@ -76,11 +82,157 @@
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </div>
         </div>
+        <div style="margin: 3px;border: 1px solid red;display: inline-block;">
+            <div style="float: left;border: 1px solid blue; margin:2px;">
 
-        <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright @Hossen Ali
+                <form action="#">
+                    <label for="cars">Choose a car:</label>
+                    <select id="cars" name="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select><br><br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div style="float: left;border: 1px solid blue; margin:2px;">
+                <form action="#">
+                    <input list="browsers" name="browser">
+                    <datalist id="browsers">
+                        <option value="Internet Explorer">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                    </datalist>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+        <section style="display: inline-block;">
+            <!-- Canvas.................. -->
+            <div style="float: left;">
+                <h3>Canvas circle</h3>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+                    Your browser does not support the HTML canvas tag.</canvas>
+            </div>
+            <!-- SVG...................... -->
+            <div style="float: left;">
+                <div style="float: left;">
+                    <h3>SVG circle</h3>
+                    <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                    </svg>
+                </div>
+                <div style="float: left;">
+                    <svg width="400" height="180">
+                        <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+                        Sorry, your browser does not support inline SVG.
+                    </svg>
+                </div>
+
+                <div style="float: left;">
+                    <svg height="250" width="500">
+                        <ellipse cx="240" cy="100" rx="220" ry="30" style="fill:purple" text="a" />
+                        <ellipse cx="230" cy="70" rx="190" ry="20" style="fill:lime" />
+                        <ellipse cx="235" cy="45" rx="165" ry="20" style="fill:yellow" />
+                        Sorry, your browser does not support inline SVG.
+                        <g font-size="20" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+                            <text x="230" y="120" dx="-30">This one is bigger
+                                <tspan x="230" y="145">First line.</tspan>
+                            </text>
+                            <a xlink:href="https://www.google.com" target="_blank">
+                                <text x="230" y="80" dx="-30">This one is second</text>
+                            </a>
+                        </g>
+                    </svg>
+                </div>
+                <div style="float: left;">
+                    <svg height="210" width="500">
+                        <polygon points="100,10 40,198 190,78 10,78 160,198"
+                            style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+                        Sorry, your browser does not support inline SVG.
+                        <a xlink:href="https://www.google.com" target="_blank" font-size="30" font-family="sans-serif"
+                            fill="black" stroke="none" text-anchor="middle">
+                            <text x="100" y="70" dx="20" transform="rotate(30 20,40)">A</text>
+                        </a>
+
+                    </svg>
+                </div>
+                <div style="float: left;">
+                    <svg height="250" width="500">
+                        <polygon points="220,10 300,210 170,250 123,234"
+                            style="fill:lime;stroke:purple;stroke-width:1" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section>
+            <video width="320" height="240" controls autoplay muted>
+                <source src="/images/Creating.mp4" type="video/mp4">
+                <source src="/images/Creating.org" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?">
+            </iframe>
+            <!--  getting users locations-->
+            <div style="float: left; border: 2px dotted red;">
+                <p>Click the button to get your coordinates.</p>
+
+                <button onclick="getLocation()">Try It</button>
+
+                <p id="demo"></p>
+            </div>
+        </section>
+        <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">&copy; copyright @Hossen
+            Ali
         </div>
 
     </div>
+
+    <script>
+        // script for canvas .................
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // script for getting location
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition,showError);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred."
+                    break;
+            }
+        }
+
+    </script>
 </body>
 
 </html>
