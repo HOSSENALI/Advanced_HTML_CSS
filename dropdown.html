@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: red;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* dropdown photo ....................................................*/
+        .dropdown_photo-content {
+            display: none;
+            position: relative;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown_photo:hover .dropdown_photo-content {
+            display: block;
+        }
+
+        .small {
+            width: 100px;
+            height: 100px;
+        }
+
+        .small:hover {
+            display: none;
+        }
+
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .dropdown_photo {
+            display: inline-block;
+        }
+
+        /* image gallery........................................................ */
+        /* div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 20%;
+        } */
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        @media only screen and (max-width: 900px) {
+            .responsive {
+                width: 32.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li class="dropdown">
+                    <a href="#">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="photo_gallery">
+            <h4>Resize the browser window to see the effect.</h4>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="/images/img_5terre.jpg">
+                        <img src="/images/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+            </div>
+
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="/images/img_forest.jpg">
+                        <img src="/images/img_forest.jpg" alt="Forest" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="/images/img_lights.jpg">
+                        <img src="/images/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="/images/img_mountains.jpg">
+                        <img src="/images/img_mountains.jpg" alt="Mountains" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+            </div </div>
+            <div style="border: 1px solid red; float: left;">
+                <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p>
+
+                <div class="dropdown_photo">
+                    <img src="/images/img_5terre.jpg" alt="Cinque Terre" class="small">
+                    <div class="dropdown_photo-content">
+                        <img src="/images/img_5terre.jpg" alt="Cinque Terre" width="500" height="400">
+                        <div class="desc">Beautiful Cinque Terre</div>
+                    </div>
+                </div>
+            </div>
+    </main>
+</body>
+
+</html>

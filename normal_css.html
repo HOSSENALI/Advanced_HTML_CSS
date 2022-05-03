@@ -2,7 +2,9 @@
 <html>
 
 <head>
-  <link rel="stylesheet"href="style.css">
+  <title>Normal Css</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normal_css.css">
   <style>
     body {
       background-image: url("/image/workplace.jpg");
@@ -28,49 +30,59 @@
 
 <body>
 
-  <h1>Hello There!</h1>
-  <ul class="unorder">
-    <li>Coffee</li>
-    <li>Coffee</li>
-    <li>Coffee</li> 
+
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
   </ul>
-  <table id="customers">
-    <tr>
-      <th>Company</th>
-      <th>Contact</th>
-      <th>Country</th>
-    </tr>
-    <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
-    </tr>
-    <tr>
-      <td>Berglunds snabbköp</td>
-      <td>Christina Berglund</td>
-      <td>Sweden</td>
-    </tr>
-    <tr>
-      <td>Centro comercial Moctezuma</td>
-      <td>Francisco Chang</td>
-      <td>Mexico</td>
-    </tr>
-    <tr>
-      <td>Ernst Handel</td>
-      <td>Roland Mendel</td>
-      <td>Austria</td>
-    </tr>
+  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h1>Hello There!</h1>
+    <table id="customers">
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Berglunds snabbköp</td>
+        <td>Christina Berglund</td>
+        <td>Sweden</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+      </tr>
 
-  </table>
-  <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+    </table>
+    <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
 
-  <div class="sticky">I am sticky!</div>
-  
-  <div style="padding-bottom:2000px">
-    <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
-    <p>Scroll back up to remove the stickyness.</p>
-    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <div class="sticky">I am sticky!</div>
+
+    <div style="padding-bottom:2000px">
+      <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.
+      </p>
+      <p>Scroll back up to remove the stickyness.</p>
+      <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque
+        et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+      <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque
+        et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    </div>
   </div>
 </body>
+
 </html>
