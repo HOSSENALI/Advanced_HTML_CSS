@@ -20,7 +20,7 @@
 
 
         .header {
-
+            /* positioning text in center */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -45,9 +45,7 @@
             background-color: #333;
         }
 
-        li {
-            float: left;
-        }
+       
 
         li a {
             display: inline-block;
@@ -88,22 +86,33 @@
             display: block;
         }
 
-        /* Column container */
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
 
+        /* navbar container */
         .navbar,
         ul {
             display: flex;
+            /* height: 100px; */
             flex-direction: row;
             text-align: center;
+            align-items: center; 
+            justify-content: center;
 
         }
 
         .navbar {
             background-color: #333;
+        }
+
+        .test {
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
         }
 
         /* Create two unequal columns that sits next to each other */
@@ -157,6 +166,7 @@
                 flex-direction: column;
             }
         }
+
         @media screen and (max-width: 700px) {
             .header {
                 display: none;
