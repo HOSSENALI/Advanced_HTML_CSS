@@ -1,0 +1,28 @@
+// creating variables...........................
+$myColor: red;
+$myHeight:200px;
+$myWidth:400px;
+
+
+// using variables...............................
+div{
+  height: $myHeight;
+  width: $myWidth;
+  background-color: $myColor;
+}
+
+
+// creating @mixin............................
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+  }
+
+  
+  // including @mixin.............................
+  .danger {
+    @include important-text;
+    background-color:pink;
+  }
