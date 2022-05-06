@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="mySASS.css">
-<body>
-<div>
-<h1>Hello World</h1>
 
-<p class="danger">Warning! This is some text.</p>
-</div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mySASS.css">
+    <style>
+   @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+
+
+<body>
+    <div class="grid-container">
+        <div class="first col-12 col-s-12" id="first">
+            <h1>Hello World</h1>
+
+            <p class="danger">Warning! This is some text.</p>
+        </div>
+        <div class=" col-12 col-s-12 extend-parent  " id="second">
+            Extend example parent
+        </div>
+        <div class=" col-12 col-s-12 extend-child " id="third">
+            Extend example child
+        </div>
+        <div class="col-12 col-s-12 extend-parent " id="forth">
+            Extend example
+        </div>
+        <div class="col-12 col-s-12 extend-footer " id="fifth">
+            Footer
+        </div>
+
+    </div>
 </body>
+
 </html>

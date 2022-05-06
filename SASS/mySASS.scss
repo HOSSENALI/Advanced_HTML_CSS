@@ -2,15 +2,43 @@
 $myColor: red;
 $myHeight:200px;
 $myWidth:400px;
-
-
-// using variables...............................
-div{
-  height: $myHeight;
-  width: $myWidth;
-  background-color: $myColor;
+// item name 
+#first {
+  grid-area: header;
+}
+#second {
+  grid-area: menubar;
+}
+#third {
+  grid-area: main;
+}
+#forth {
+  grid-area: sidebar;
+}
+#fifth {
+  grid-area: footer;
 }
 
+// grid..........
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  'header header header header header header'
+  'menubar main main main sidebar sidebar'
+  'menubar main main main sidebar sidebar'
+  'footer footer footer footer footer footer';
+  gap: 4px;
+  // background-color: #2196F3;
+  // align-content: center;
+  // justify-content: space-between;
+  // height: 500px;
+  
+}
+// using variables...............................
+
+*{
+  box-sizing: border-box;
+}
 
 // creating @mixin............................
 @mixin important-text {
@@ -19,10 +47,65 @@ div{
     font-weight: bold;
     border: 1px solid blue;
   }
+@mixin border{
+  border: 5px solid black;
+}
+// passing variables into mixin...................
+@mixin bordered($myColor,$width) {
+  border: $width solid $myColor;
+}
+.first{
+  @include bordered(blue,5px);
+  height: $myHeight;
+  // width: $myWidth;
+  background-color: $myColor;
+  // float: left;
+}
+// taking attribute like a function..................
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
 
-  
   // including @mixin.............................
   .danger {
     @include important-text;
+    @include border;
+    @include transform(rotate(2deg));
     background-color:pink;
+   
   }
+
+h1{
+  @include transform(rotate(2deg)); //sending value to the @mixin
+ 
+}
+// Extend....................
+@mixin extend{
+  border: 5px solid black;
+  display: inline-block;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  // float: left
+  
+}
+.extend-parent{
+@include extend;
+height: auto;
+// width: $myWidth;
+background-color: antiquewhite;
+}
+.extend-child{
+  @extend .extend-parent;
+  background-color: blue;
+  color: white;
+  height: 600px;
+}
+.extend-footer{
+  @extend .extend-parent;
+  background-color: blue;
+  color: white;
+  height: 200px;
+}

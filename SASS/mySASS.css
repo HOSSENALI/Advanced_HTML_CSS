@@ -1,6 +1,36 @@
-div {
+#first {
+  grid-area: header;
+}
+
+#second {
+  grid-area: menubar;
+}
+
+#third {
+  grid-area: main;
+}
+
+#forth {
+  grid-area: sidebar;
+}
+
+#fifth {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header header header header header header" "menubar main main main sidebar sidebar" "menubar main main main sidebar sidebar" "footer footer footer footer footer footer";
+  gap: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.first {
+  border: 5px solid blue;
   height: 200px;
-  width: 400px;
   background-color: red;
 }
 
@@ -9,7 +39,39 @@ div {
   font-size: 25px;
   font-weight: bold;
   border: 1px solid blue;
+  border: 5px solid black;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
   background-color: pink;
+}
+
+h1 {
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.extend-parent, .extend-footer, .extend-child {
+  border: 5px solid black;
+  display: inline-block;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  height: auto;
+  background-color: antiquewhite;
+}
+
+.extend-child {
+  background-color: blue;
+  color: white;
+  height: 600px;
+}
+
+.extend-footer {
+  background-color: blue;
+  color: white;
+  height: 200px;
 }
 
 /*# sourceMappingURL=mySASS.css.map */
