@@ -50,6 +50,7 @@ h1 {
   -webkit-transform: rotate(2deg);
   -ms-transform: rotate(2deg);
   transform: rotate(2deg);
+  text-align: center;
 }
 
 .extend-parent, .extend-footer, .extend-child {

@@ -79,7 +79,7 @@ $myWidth:400px;
 
 h1{
   @include transform(rotate(2deg)); //sending value to the @mixin
- 
+ text-align: center;
 }
 // Extend....................
 @mixin extend{
